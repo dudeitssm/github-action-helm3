@@ -1,3 +1,5 @@
+(2023-10-17: As of the latest AWS CLI, there is an added requirement of having `aws-iam-authenticator` installed, which this fork does).
+
 # Helm Github Action
 
 Runs given Helm/shell commands after ensuring Helm and kubectl are installed or pull in it's own. 
