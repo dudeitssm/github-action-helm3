@@ -79,6 +79,7 @@ async function main() {
         'curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 > /dev/null 2>&1\n' +
         'curl -Lo ' + dockerKubeConfigDir + '/aws-iam-authenticator https://github.com/kubernetes-sigs/aws-iam-authenticator/releases/download/v0.5.9/aws-iam-authenticator_0.5.9_linux_amd64\n' +
         'chmod 755 ' + dockerKubeConfigDir + '/aws-iam-authenticator\n' +
+        'ln -s ' + dockerKubeConfigDir + '/aws-iam-authenticator /usr/local/bin/aws-iam-authenticator\n' +
         'chmod 700 get_helm.sh > /dev/null 2>&1\n' +
         'HELM_INSTALL_DIR=' + dockerKubeConfigDir + ' ./get_helm.sh > /dev/null 2>&1\n' +
         'rm ./get_helm.sh > /dev/null 2>&1\n' +
